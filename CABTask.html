@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+   //1.using call     
+ let arr=[2,5,8,9,4,7,10,55,70,1]
+ console.log(Math.max.call(...arr))
+
+ console.log(Math.max.call(...arr,80,60,50))
+
+ console.log(Math.max.call(...arr,null))
+
+
+  //2.using apply
+
+  let arr1=[70,50,40,44,66,33,20,100,399]
+  console.log(Math.max.apply(null,[...arr1]))
+
+  console.log(Math.max.apply(null,[...arr1,111111,111111]))
+
+
+  //3.using bind
+
+  let arr2=[12,26,4,13,77,56,9,67]
+  let binding=Math.max.bind(...arr2)
+ console.log(binding)
+
+ let arr3 = [22, 11, 4, 55, 6, 5, 4, 45, 66];
+let maxUsingBind = Math.max.bind(null, ...arr3)
+console.log(maxUsingBind());
+
+    </script>
+</body>
+</html>
